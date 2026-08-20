@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Household Energy Dashboards</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background:#f4f6f8; color:#17202a; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px; }
+    main { width:min(880px,100%); }
+    h1 { font-size:clamp(2rem,5vw,3.5rem); line-height:1.05; margin:0 0 12px; letter-spacing:-.04em; }
+    .intro { color:#5b6572; font-size:1.05rem; margin:0 0 32px; }
+    .views { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
+    a { display:block; min-height:220px; padding:26px; border:1px solid #dce2e8; border-radius:18px; background:white; color:inherit; text-decoration:none; box-shadow:0 10px 30px rgba(33,48,66,.07); transition:.18s ease; }
+    a:hover { transform:translateY(-3px); border-color:#7196c5; box-shadow:0 16px 36px rgba(33,48,66,.12); }
+    .eyebrow { color:#416a9b; font-size:.78rem; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+    h2 { margin:20px 0 10px; font-size:1.65rem; }
+    p { margin:0; color:#5b6572; line-height:1.55; }
+    .arrow { display:block; margin-top:24px; color:#285b91; font-weight:700; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Household energy dashboards</h1>
+    <p class="intro">Choose the focused weekly view or the cumulative history. Historical dates are merged safely, with newer reviewed exports replacing overlapping earlier readings.</p>
+    <section class="views" aria-label="Dashboard views">
+      <a href="weekly_household_energy_dashboard.html">
+        <span class="eyebrow">Current</span>
+        <h2>Latest week</h2>
+        <p>The newest seven complete meter days, including interval patterns, peaks, weather cross-reference, and known household events.</p>
+        <span class="arrow">Open latest week →</span>
+      </a>
+      <a href="household_energy_history_dashboard.html">
+        <span class="eyebrow">Cumulative</span>
+        <h2>All history</h2>
+        <p>Every retained daily result, with overlapping dates replaced by the latest reviewed GloBird export rather than counted twice.</p>
+        <span class="arrow">Open all history →</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
